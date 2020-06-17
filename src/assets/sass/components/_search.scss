@@ -1,0 +1,178 @@
+.search-form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 35px;
+    align-items: center;
+    color: $color-dark-grey;
+    font-size: 2.2rem;
+
+    @include media-tablet {
+        flex-direction: column;
+        padding: 10px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+.search-input {
+    display: block;
+    width: calc(100% - 95px);
+    height: 45px;
+    background-image: url('../images/icons/search.svg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: text;
+    border-radius: 5px;
+    color: $color-light-grey;
+    border: 1px solid $color-border-grey;
+    margin-right: 5px;
+    background-position: 10px;
+    padding-right: 150px;
+    padding-left: 65px;
+    font-size: 2.2rem;
+    background-color: $color-input-bg;
+    font-family: $font-play;
+
+    @include media-tablet {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        background-position: 5px;
+        font-size: 2rem;
+        height: 50px;
+        padding: 10px 10px 10px 27px;
+        background-size: 17px;
+    }
+}
+
+.search-input:focus {
+    outline: 0;
+}
+
+.search-btn {
+    display: block;
+    padding: 8px 15px;
+    height: 45px;
+    width: 90px;
+    background-color: $color-searchbtn-bg;
+    border: 1px solid $color-input-bg;
+    border-radius: 5px;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-family: $font-play;
+
+    @include media-tablet {
+        width: 100%;
+        height: 50px;
+        font-size: 2rem;
+        padding: 10px 15px;
+    }
+}
+
+.search-btn:active,
+.search-btn:focus {
+    outline: 0;
+    border: 0;
+}
+
+.search-keyboard,
+.microphone,
+.search-clear {
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.search-keyboard {
+    width: 50px;
+    height: 28px;
+    background-image: url('../images/icons/keyBoa.svg');
+    background-size: 50px;
+    right: 115px;
+
+    @include media-tablet {
+        right: 16px;
+        width: 30px;
+        background-size: 30px;
+        margin-top: 10px;
+    }
+}
+
+.microphone {
+    width: 48px;
+    height: 28px;
+    background-image: url('../images/icons/tool.svg');
+    background-size: 22px;
+    right: 165px;
+
+    @include media-tablet {
+        right: 42px;
+        background-size: 15px;
+        width: 30px;
+        margin-top: 10px;
+    }
+}
+
+.search-clear {
+    width: 30px;
+    height: 27px;
+    background-image: url('../images/icons/clear.svg');
+    background-size: 20px;
+    right: 210px;
+
+    @include media-tablet {
+        width: 20px;
+        background-size: 15px;
+        right: 67px;
+        margin-top: 11px;
+    }
+}
+
+.microphone-active {
+    background-image: url('../images/icons/tool-active.svg');
+}
+
+.tooltip:hover:after {
+    content: attr(data-name);
+    position: absolute;
+    padding: 7px 12px;
+    width: 80px;
+    top: 50px;
+    left: -28px;
+    background: $color-tooltip;
+    border-radius: 8px;
+    color: $color-white;
+    text-align: center;
+    font-size: 16px;
+
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.tooltip:hover:before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: $color-tooltip;
+
+    @include media-mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,96 @@
+.keyboard-wrap {
+    position: absolute;
+    background: $color-dark-grey;
+    padding: 4px;
+    max-width: 870px;
+    margin: 0 auto;
+    z-index: 20;
+    top: 280px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: ease-in-out 0.6s;
+
+    @include media-mobile {
+        max-width: 320px;
+        padding: 0;
+    }
+}
+
+.none {
+    top: -300px;
+}
+
+.keyboard {
+    position: relative;
+}
+
+.row {
+    display: flex;
+}
+
+.key {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 3px;
+    font-size: 1.6rem;
+    background: $color-light-grey;
+    color: $color-white;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    overflow: hidden;
+    text-align: left;
+
+    @include media-mobile {
+        font-size: 0.7rem;
+        margin: 1px;
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.dark {
+    background: $color-grey;
+}
+
+.key2 {
+    flex-grow: 1;
+}
+
+.key7 {
+    flex-grow: 6;
+}
+
+.language {
+    background-size: 24px;
+    background-image: url('../images/icons/lang.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-mobile {
+        background-size: 14px;
+    }
+}
+
+.close {
+    background-size: 24px;
+    background-image: url('../images/icons/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-mobile {
+        background-size: 14px;
+    }
+}
+
+.key:not(.language):not(.close):hover {
+    background: $color-keyboard-hover;
+}
+
+.close:hover,
+.language:hover {
+    background-color: $color-keyboard-hover;
+}

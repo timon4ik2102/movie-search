@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="ru">
+    <title>Movie search</title>
+    <link rel="shortcut icon" href="./assets/images/icons/iconmovie.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container container">
+                <h1>MovieSearch</h1>
+            </div>
+        </header>
+        <main class="container">
+            <div class="keyboard-wrap none"></div>
+            <form class=search-form>
+                <input id="searchTerm" class="search-input input" type="text" placeholder="Search movie" autofocus=""
+                    autocomplete="off">
+                <button class="search-btn" type="submit">Search</button>
+                <span data-name="Clear" class="search-clear tooltip"></span>
+                <span data-name="Keyboard" class="search-keyboard tooltip "></span>
+                <span data-name="Microphone Your language browser" class="microphone tooltip"></span>
+                <div class="spinner lds-hourglass non-visible"></div>
+            </form>
+            <p class="info"></p>
+            <div class="swiper-outer">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper"></div>
+                </div>
+                <div class="swiper-btn  swiper-button-next"></div>
+                <div class="swiper-btn  swiper-button-prev"></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-container container">
+                <a class="footer-link" href="https://rs.school/" class="rss"> RS School 2020q1 </a>
+                <a href="https://github.com/" class="github footer-link"> your github </a>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+.swiper-outer {
+    position: relative;
+
+
+    @include media-mobile {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.swiper-container {
+    position: relative;
+    max-height: 578px;
+    min-height: calc(100vh - 401px);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $color-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    margin-bottom: 60px;
+    cursor: pointer;
+    transition: ease-in-out 0.6s;
+
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.card {
+    display: block;
+    width: 300px !important;
+    max-width: 300px;
+    border: 0;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.card-header {
+    display: block;
+    height: 33px;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    background-color: $color-white;
+    color: $color-black;
+    text-align: center;
+    font-size: 21px;
+    padding: 5px;
+    text-overflow: clip;
+}
+
+.card-body {
+    height: 445px;
+    background-size: cover;
+    z-index: 2;
+    border: 1px solid $color-white-grey;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    background-color: $color-white-grey;
+}
+
+.card-imbd {
+    text-align: center;
+    padding: 5px;
+}
+
+.card-imbd {
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/star.svg');
+        width: 24px;
+        height: 24px;
+        top: 2px;
+        left: -25px;
+    }
+}
+
+.swiper-btn {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0;
+    width: 60px;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s;
+    color: $color-arrow;
+
+    &:after {
+        @include media-desktop-small {
+            font-size: 30px;
+        }
+    }
+
+    @include media-desktop-small {
+        width: 30px;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.swiper-btn:active,
+.swiper-btn:focus {
+    outline: 0;
+    border: 0;
+}
+
+.swiper-btn:hover {
+    color: $color-arrow-hover;
+}
+
+.swiper-button-next {
+    right: -60px;
+
+    @include media-desktop-small {
+        right: -30px;
+    }
+}
+
+.swiper-button-prev {
+    left: -60px;
+
+    @include media-desktop-small {
+        left: -30px;
+    }
+}

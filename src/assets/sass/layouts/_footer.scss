@@ -1,0 +1,54 @@
+.footer {
+    width: 100%;
+    min-height: 60px;
+    background-color: $color-grey-blue;
+    border-top: 2px solid $color-dark-grey;
+    margin-top: 40px;
+}
+
+.footer-container {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    margin: 0 auto;
+    @include media-mobile {
+        padding: 0 10px;
+    }
+}
+
+.footer-link {
+    color: $color-white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: $color-light-grey;
+    }
+}
+
+.github {
+    position: relative;
+    padding-left: 50px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: -4px;
+        width: 32px;
+        height: 32px;
+        background-image: url('../images/icons/github.svg');
+        background-size: cover;
+
+        @include media-mobile {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    @include media-mobile {
+        padding-left: 32px;
+    }
+}
