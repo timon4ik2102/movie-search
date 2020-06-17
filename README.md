@@ -13,3 +13,4 @@ TECHNICAL IMPLEMENTATION:
 7.  Swiper Framework  has been implemented
 8.  Speech recognition has been implemented in search input
 9.  Virtual keyboard has been implemented
+10. Usind YandexApi. Tranclation may be cannot work in Ukraine 
