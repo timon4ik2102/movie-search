@@ -1,6 +1,6 @@
 # movie search application by RSS
 
-My App Link [https://timon4ik2102-moviesearch.netlify.app/it]
+My App Link [https://timon4ik2102-moviesearch.netlify.app/]
 
 TECHNICAL IMPLEMENTATION:
 
